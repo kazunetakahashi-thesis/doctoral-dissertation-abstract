@@ -1,0 +1,240 @@
+%
+% File    : contents.tex
+% Author  : Kazune Takahashi
+% Created : 1/5/2019, 8:59:35 PM
+% Powered by Visual Studio Code
+%
+
+\section{主定理}
+
+本論文では， $2$ 種類の臨界 Sobolev 指数を持つ Hénon 型方程式を考察する．
+$N \geq 3$ を自然数とし， $2^* = 2N/(N-2)$ を臨界 Sobolev 指数とする．
+$\Omega \subset \R^N$ を区分的 $C^1$ 級有界領域とし，
+$\Omega \subset B(0, 1)$ を充たすものとする．
+ここで， $B(x, r) = \{ y \in \R^N \mid \lvert y - x \rvert < r \}$
+である．
+$x_0 = (1, 0, \dots, 0) \in \R^N$ とする．
+$x_0 \in \partial \Omega$ 及び
+$\Omega$ が $x_0$ で内部球条件を充たすことを仮定する．
+関数 $\Psi \in L^\infty(\Omega) \setminus \{ 0 \}$ について，
+以下の $2$ つの条件を導入する．
+\begin{enumerate}[(T1)]
+  \setcounter{enumi}{-1}
+  \item \label{enum:T0}
+    $\Psi \geq \kappa_0 \tin \omega$ を充たす
+    開集合 $\omega \subset \Omega$ と
+    定数 $\kappa_0 > 0$ が存在する．
+  \item \label{enum:T1}
+    $m > 0$, $\beta \geq 0$ 及び開球
+    $B \subset \Omega$ が存在し，
+    $x_0 \in \partial \Omega$ 及び
+    $\Psi \geq \Psi_0 \tin \Omega$ が成立する．
+    ここで， $\Psi_0$ は以下で定める．
+    \begin{equation}
+      \Psi_0(x) =
+      \begin{cases}
+        m \left\lvert x - x_0 \right\rvert^\beta
+        & x \in B, \\
+        0 & x \not\in B.
+      \end{cases}
+      \label{eq:Psi_0}
+    \end{equation}
+\end{enumerate}
+
+本論文の Chapter 3 では以下の方程式について考察する．
+\begin{align}
+  \left\{
+  \begin{aligned}
+    - \Delta u & = \lambda \Psi u + \lvert x \rvert^\alpha u^{2^*-1}
+               &                                                     & \tin \Omega,                        \\
+    u          & > 0                                                 &              & \tin \Omega,         \\
+    u          & = 0                                                 &              & \ton \partial\Omega.
+  \end{aligned}
+  \right. \label{eq:henon_prob_main}
+\end{align}
+定数 $\lambda$ は $\lambda < \lambda_1$ を充たすものとする．
+ここで $\lambda_1$ は，次の
+Dirichlet 固有値問題の第 $1$ 固有値とする：
+$-\Delta \phi = \lambda \Psi \phi \tin \Omega$.
+また， $\alpha > 0$ とする．
+
+\begin{thm}[Theorem 1.1.1] \label{thm:henon_main}
+  $N \geq 4$, $0 < \lambda < \lambda_1$ とする．
+  $\Psi \in L^\infty(\Omega) \setminus \{ 0 \}$
+  は $0 \leq \Psi \leq 1 \tin \Omega$ を充たすものとする．
+  (T\ref{enum:T1}) を仮定する．
+  このとき，十分小さな $\alpha > 0$ に対し，
+  方程式 \eqref{eq:henon_prob_main}
+  は解 $u \in H_0^1(\Omega)$ を持つ．
+\end{thm}
+
+本論文の Chapter 4 では以下の Kirchhoff 型方程式について考察する．
+\begin{align}
+  \left\{
+  \begin{aligned}
+    - \left( a + b \left( \int_\Omega \lvert Du \rvert^2 dx \right)^{(p-2)/2} \right) \Delta u &= \Psi u^{q-1} + \lvert x \rvert^\alpha u^{2^* - 1}
+               &                                                     & \tin \Omega,                        \\
+    u          & > 0                                                 &              & \tin \Omega,         \\
+    u          & = 0                                                 &              & \ton \partial\Omega.
+  \end{aligned}
+  \right. \label{eq:kirchhoff_prob_main}
+\end{align}
+ここで $\alpha \geq 0$, $p > 2$, $q \geq 2$, $a \geq 0$, $b \geq 0$
+は $a + b > 0$ を充たす定数である．
+
+\begin{thm}[Theorem~1.1.2] \label{thm:kirchhoff_main}
+  $2 < p < q < 2^*$ とする．
+  $\Psi \in L^\infty(\Omega) \setminus \{ 0 \}$ は，
+  ある定数 $\kappa > 0$ が存在し
+  $0 \leq \Psi \leq \kappa \tin \Omega$
+  を充たすものとする．
+  以下の条件 (1), (2) のいずれかの成立を仮定する．
+  \begin{enumerate}[(1)]
+    \item $N = 3$ and $4 < q < 2^* = 6$,
+    \item $N \geq 4$.
+  \end{enumerate}
+  \begin{enumerate}[(i)]
+    \item
+      $\alpha = 0$ とする． (T\ref{enum:T0}) を仮定する．
+      このとき，方程式 \eqref{eq:kirchhoff_prob_main}
+      は解 $u \in H_0^1(\Omega)$ を持つ．
+    \item
+      $\alpha > 0$ とする． (T\ref{enum:T1}) を仮定する．
+      このとき，十分小さな $\alpha > 0$ に対し，
+      方程式 \eqref{eq:kirchhoff_prob_main}
+      は解 $u \in H_0^1(\Omega)$ を持つ．
+  \end{enumerate}
+\end{thm}
+
+(T\ref{enum:T1}) の条件を充たす例として，以下の系がある．
+この例では， $\Psi$ は $\partial \Omega$ で消えている．
+
+\begin{cor}[Corollary~1.1.3] \label{cor:cor_of_main_theorem}
+  $\Omega = B(0, 1)$, $\beta_0 > 0$ とする．
+  $\Psi(x) = \left(1 - \lvert x \rvert \right)^{\beta_0}$ と定める．
+  \begin{enumerate}[(i)]
+    \item
+      $N \geq 4$, $0 < \lambda < \lambda_1$ とする．このとき，
+      小さな $\alpha > 0$ に対し， \eqref{eq:henon_prob_main} は解を持つ．
+    \item
+      $2 < p < q < 2^*$ とする．
+      定理~\ref{thm:kirchhoff_main} の (1), (2) のいずれかの成立を仮定する．
+      このとき，
+      小さな $\alpha > 0$ に対し， \eqref{eq:kirchhoff_prob_main} は解を持つ．
+  \end{enumerate}
+\end{cor}
+
+\section{先行研究}
+
+Hénon 型方程式は~\cite{henon1973numerical} において研究が始まった．
+~\cite{MR674869} を始め，数多くの研究がなされている．
+また， $\alpha = 0$, $\Psi \equiv 1 \tin \Omega$ のとき，
+\eqref{eq:henon_prob_main} は Brézis--Nirenberg
+方程式~\cite{MR709644}となる．
+Brézis--Nirenberg 型方程式は $30$ 年以上研究されている．
+\eqref{eq:henon_prob_main} は Hénon 型方程式と
+Brézis--Nirenberg 型方程式を併せたものと捉えられる．
+~\cite{MR2951742} と~\cite{MR2951722} において，
+\eqref{eq:henon_prob_main} と直接関係する以下の方程式が考察されている．
+\begin{align}
+  \left\{
+  \begin{aligned}
+    - \Delta u       & = \lambda u + \lvert x \rvert^\alpha \lvert u
+    \rvert^{2^*-2} u &                                               & \tin \Omega,                         \\
+    u                & = 0                                           &              & \ton \partial \Omega.
+  \end{aligned}
+  \right. \label{eq:henon-brezis-nirenberg}
+\end{align}
+$\alpha > 0$, $\lambda > \lambda_1'$ は定数である．
+ここで $\lambda_1'$ は，
+次の Dirichlet 固有値問題の第 $1$ 固有値とする：
+$-\Delta \phi = \lambda \phi \tin \Omega$.
+~\cite{MR2951742} 及び~\cite{MR2951722} では，
+それぞれ，
+$N \geq 7$ かつ $\partial\Omega$ が滑らかなとき，及び，
+$N \geq 5$ かつ $\Omega = B(0, 1)$ のとき，
+\eqref{eq:henon-brezis-nirenberg} が符号変化解を
+小さな $\alpha > 0$ に対して持つことが示されている．
+本論文の Chapter 3 では $0 < \lambda < \lambda_1$ のときの
+正値解について， $N \geq 4$ かつ $\Omega$ がより一般的であり，
+$\Psi$ が定数とは限らない場合を考察する．
+
+$p = 4$, $\alpha = 0$, $\Psi \equiv \lambda$ が定数のとき，
+\eqref{eq:kirchhoff_prob_main} は標準的な，
+臨界 Sobolev 指数を持つ Kirchhoff 型の楕円型方程式となる．
+~\cite{MR3278854} においては，
+$N = 3$, $4 < q < 6$ のとき，
+全ての $\lambda > 0$ に対し解が存在することが示されている．
+また，~\cite{MR3018020} 及び~\cite{MR3278854} においては，
+$N = 3$, $2 < q \leq 4$ のとき，
+ある $\lambda^* \geq 0$ が存在し，
+全ての $\lambda > \lambda^*$ に対し解が存在することが
+それぞれ異なる汎関数の切り捨て手法により示されている．
+これらの研究に触発され，
+臨界 Sobolev 指数を持つ Kirchhoff 型の楕円型方程式
+は近年活発に研究がなされている．
+$N = 4$ での研究結果としては~\cite{MR3210026} が挙げられる．
+また，非局在項の拡張もなされている．
+特に~\cite{MR3539075} では，定理~\ref{thm:kirchhoff_main}~(i) が
+$a > 0$ の場合に示されている．
+\eqref{eq:kirchhoff_prob_main}
+は臨界 Sobolev 指数を持つ Kirchhoff 型方程式
+と Hénon 型方程式を併せたものと捉えられる．
+本論文の Chapter 4 で
+\eqref{eq:kirchhoff_prob_main} を考察するが，この章の目的の 1 つは，
+Chapter 2 で得られる結果を~\cite{MR3278854} の議論に応用し，
+非局在項をより一般化した状態で結果を得ることである．
+
+\section{手法}
+
+本論文で用いられる手法は，峠の定理と Talenti 関数である．
+Hénon 型方程式の係数である $\lvert x \rvert^\alpha$ は
+$\Omega$ 上で最大値を取らない．そこで以下の関数を導入し，
+Chapter 2 で積分の評価を議論する．
+\[
+  u_{\epsilon, l}(x) = \frac{\xi_l(x)}{\left(\epsilon +
+    \left\lvert x - x_l \right\rvert^2 \right)^{(N-2)/2}}.
+\]
+ここで， $\epsilon > 0$, $x_l = (1-l, 0, \dots, 0) \in \R^N$ であり，
+$\xi_l \in C^\infty_c (\Omega)$ は
+$B(x_l, l)$ を台とする切り取り関数である．
+$l = l(\epsilon)$ は，
+$l \to 0$ ($\epsilon \to 0$) を充たす
+$\epsilon$ の関数とみなす．
+定理~\ref{thm:henon_main}, ~\ref{thm:kirchhoff_main} を示すために，
+次の $2$ 種類の関数を導入する：
+$l = l(\epsilon) = \epsilon^\gamma$ ($0 < \gamma < 1/2$),
+$l = l(\epsilon) = \lvert \log \epsilon \rvert^{-k}$ ($k > 0$).
+前者は既に~\cite{MR2951742} と~\cite{MR2951722}
+で，固定された $\gamma$ について考察されているが，
+本論文では $\Psi$ は $\partial \Omega$ で消える可能性がある関数であるため，
+$\gamma$ と $k$ をうまく選ぶ必要がある．
+
+\eqref{eq:kirchhoff_prob_main} の考察をする際に，
+汎関数 $I \colon H_0^1(\Omega) \to \R$ を導入し，峠の定理を適用する．
+また $I$ の $(\text{PS})_c$ 条件が達成される $c > 0$ の上界を考察する．
+\eqref{eq:kirchhoff_prob_main} を考察する上で困難な点は，
+$p$, $N$ が $p = 4$, $N = 3$ とは限らないことである．
+~\cite{MR3278854} においては， $p = 4$, $2^* = 6$
+であるため， $2$ 次方程式を直接解くことにより
+$c$ の上界が得られ，
+$2$ 次不等式を直接解くことで， $I$ の峠の高さを評価している．
+一方，本論文では，以下の明示的には解けない方程式を考察することになる．
+\[
+  \left( a + b \eta^{(p-2)/2} \right) \eta - \left( \frac{\eta}{S} \right)^{2^*/2} = 0.
+\]
+この唯一の正値解を $\eta_0$ とおき，
+$\eta_0$ を用いて $c$ の上界の記述を試み，
+$I$ の峠の高さの評価を試みる．
+このような議論は~\cite{MR3539075} で既に導入されている．
+しかし本論文では，
+Lions の第 2 集散コンパクト性補題~\cite{MR834360} を含む
+~\cite{MR3278854} の議論の直接の拡張を試みるので，
+$a = 0$, $b > 0$ の場合を結果に含む．
+またこの議論は Hénon 型の係数とも相性が良い．
+
+系~\ref{cor:cor_of_main_theorem} は
+定理~\ref{thm:henon_main},~\ref{thm:kirchhoff_main}
+の帰結であるが，
+\eqref{eq:Psi_0} で定義される $\Psi_0$ の存在を，
+$2$ 次元平面への射影を用いて，初等幾何で示す．

@@ -1,0 +1,59 @@
+% !TEX program = lualatex
+%
+% File    : main.tex
+% Author  : Kazune Takahashi
+% Created : 1/5/2019, 4:58:54 PM
+% Powered by Visual Studio Code
+%
+
+\documentclass[lualatex, ja=standard]{bxjsarticle}
+\usepackage[hiragino-pron]{luatexja-preset}
+
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{newtxtext,newtxmath}
+\usepackage{url}
+\usepackage{enumerate}
+\usepackage{mathtools}
+\usepackage{cases}
+
+\theoremstyle{plain}
+
+\theoremstyle{definition}
+\newtheorem{thm}{定理}
+\newtheorem{prop}[thm]{命題}
+\newtheorem{cor}[thm]{系}
+\newtheorem{lem}[thm]{補題}
+\newtheorem{defn}[thm]{定義}
+\newtheorem{nota}[thm]{記号}
+
+\theoremstyle{remark}
+\newtheorem{rem}[thm]{注意}
+\newtheorem{ex}[thm]{例}
+
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Q}{\mathbb{Q}}
+
+\newcommand{\tin}{\text{ in }}
+\newcommand{\ton}{\text{ on }}
+
+\begin{document}
+
+\begin{center}
+  {\Huge 論文の内容の要旨}
+\end{center}
+{\Large
+
+\noindent 論文題目： Hénon type elliptic equations with critical Sobolev growth (臨界 Sobolev 指数を持つ Hénon 型楕円型方程式)
+
+\noindent 氏名： 高橋 和音 (Kazune Takahashi)
+}
+
+\input{contents}
+
+\bibliographystyle{amsplain}
+\bibliography{ref}
+
+\end{document}
